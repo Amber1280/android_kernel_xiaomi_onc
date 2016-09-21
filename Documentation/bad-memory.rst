@@ -42,4 +42,3 @@ With the numbers of the example above:
 memmap=64K$0x18690000
  or
 memmap=0x10000$0x18690000
-
