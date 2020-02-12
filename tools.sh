@@ -31,3 +31,11 @@ if [ ! -d libufdt ]; then
     tar xvzf utils.tar.gz -C libufdt
     rm utils.tar.gz
 fi
+
+# Download libufdt
+if [ ! -d libufdt ]; then
+    wget https://android.googlesource.com/platform/system/libufdt/+archive/refs/tags/android-10.0.0_r29/utils.tar.gz
+    mkdir -p libufdt
+    tar xvzf utils.tar.gz -C libufdt
+    rm utils.tar.gz
+fi
