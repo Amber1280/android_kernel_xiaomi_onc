@@ -229,7 +229,7 @@ int fpc_probe(struct platform_device *pldev,
 	pr_info("Using GPIO#%d as IRQ.\n", fpc->irq_gpio);
 	pr_info("Using GPIO#%d as RST.\n", fpc->rst_gpio);
 	fpc->wakeup_enabled = false;
-	irqf |= IRQF_ONESHOT;
+	irqf |= IRQF_ONESHOT | IRQF_PERF_CRITICAL;
 	if (of_property_read_bool(dev->of_node, "fpc,enable-wakeup")) {
 		irqf |= IRQF_NO_SUSPEND;
 		device_init_wakeup(dev, 1);
