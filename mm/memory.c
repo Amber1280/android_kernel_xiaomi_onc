@@ -1249,7 +1249,6 @@ again:
 	}
 
 	if (addr != end) {
-		progress = 0;
 		cond_resched();
 		goto again;
 	}

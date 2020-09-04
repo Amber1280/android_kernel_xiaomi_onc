@@ -32,7 +32,6 @@
 #include <linux/compiler.h>
 #include <linux/llist.h>
 #include <linux/bitops.h>
-#include <linux/rbtree_augmented.h>
 #include <linux/overflow.h>
 
 #include <asm/uaccess.h>

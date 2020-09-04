@@ -8222,9 +8222,9 @@ int sched_cpu_deactivate(unsigned int cpu)
 	 *
 	 * Do sync before park smpboot threads to take care the rcu boost case.
 	 */
-#ifdef CONFIG_PREEMPT
-	synchronize_sched();
-#endif
+	if (IS_ENABLED(CONFIG_PREEMPT))
+		synchronize_sched();
+
 	synchronize_rcu();
 
 #ifdef CONFIG_SCHED_SMT
