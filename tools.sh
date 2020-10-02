@@ -5,7 +5,7 @@
 # Android Kernel Build Script
 
 # Install build package for debian based linux
-   apt install bc bash git-core gnupg build-essential \
+   apt -y install bc bash git-core gnupg build-essential \
     zip curl make automake autogen autoconf autotools-dev libtool shtool python \
     m4 gcc libtool zlib1g-dev flex bison libssl-dev
 
